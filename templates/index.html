@@ -20,10 +20,17 @@
     <h2>Mars Information:</h2>
     <h3>Title: {{ mars.news.title }}</h3>
     <h3>Synopsis: {{ mars.news.paragraph }}</h3>
-    <h3>Image URL: {{ mars.image }}</h3>
+    <img src = {{ mars.image }}>
     <h3>Synopsis: {{ mars.weather }}</h3>
-    <h3>Synopsis: {{ mars.table }}</h3>
-    <h3>Synopsis: {{ mars.hemispheres }}</h3>
+    <h3>Synopsis: {{ mars.table | safe}}</h3>
+    <h3>Synopsis: {{ mars.hemispheres[0].title}}</h3>
+    <img src= {{ mars.hemispheres[0].image_url}}>
+    <h3>Synopsis: {{ mars.hemispheres[1].title}}</h3>
+    <img src = {{ mars.hemispheres[1].image_url}}>
+    <h3>Synopsis: {{ mars.hemispheres[2].title}}</h3>
+    <img src = {{ mars.hemispheres[2].image_url}}>
+    <h3>Synopsis: {{ mars.hemispheres[3].title}}</h3>
+    <img src =  {{ mars.hemispheres[3].image_url}}>
   </div>
   </div>
 </body>
